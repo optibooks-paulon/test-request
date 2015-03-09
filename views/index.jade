@@ -10,8 +10,9 @@ block content
       $.ajax({
         type: 'GET',
         url: '/oauth',
-        done: function(data){
+        success: function(data){
           console.log(data);
+          window.location.href = data.url;
         }
       });
     };
